@@ -69,10 +69,8 @@ bool JointTrajectoryInterface::init(std::string default_ip, int default_port)
     return false;
   }
 
-  char* ip_addr = strdup(ip.c_str());  // connection.init() requires "char*", not "const char*"
-  ROS_INFO("Joint Trajectory Interface connecting to IP address: '%s:%d'", ip_addr, port);
-  default_tcp_connection_.init(ip_addr, port);
-  free(ip_addr);
+  ROS_INFO("Joint Trajectory Interface connecting to IP address: '%s:%d'", ip.c_str(), port);
+  default_tcp_connection_.init(ip.c_str(), port);
 
   return init(&default_tcp_connection_);
 }

@@ -51,7 +51,7 @@ TcpClient::~TcpClient()
   LOG_DEBUG("Destructing TCPClient");
 }
 
-bool TcpClient::init(char *buff, int port_num)
+bool TcpClient::init(const char *buff, int port_num)
 {
 
   int rc;

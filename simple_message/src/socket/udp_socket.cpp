@@ -65,7 +65,7 @@ UdpSocket::~UdpSocket()
   CLOSE(this->getSockHandle());
 }
 
-int UdpSocket::rawSendBytes(char *buffer, shared_int num_bytes)
+int UdpSocket::rawSendBytes(const char *buffer, shared_int num_bytes)
 {
   int rc = this->SOCKET_FAIL;
 

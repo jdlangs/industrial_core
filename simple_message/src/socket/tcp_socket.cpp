@@ -62,7 +62,7 @@ TcpSocket::~TcpSocket()
   CLOSE(this->getSockHandle());
 }
 
-int TcpSocket::rawSendBytes(char *buffer, shared_int num_bytes)
+int TcpSocket::rawSendBytes(const char *buffer, shared_int num_bytes)
 {
   int rc = this->SOCKET_FAIL;
 

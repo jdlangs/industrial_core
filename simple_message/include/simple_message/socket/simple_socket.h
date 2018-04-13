@@ -262,7 +262,7 @@ protected:
   bool receiveBytes(industrial::byte_array::ByteArray & buffer,
       industrial::shared_types::shared_int num_bytes);
   // Virtual
-  virtual int rawSendBytes(char *buffer,
+  virtual int rawSendBytes(const char *buffer,
       industrial::shared_types::shared_int num_bytes)=0;
   virtual int rawReceiveBytes(char *buffer,
       industrial::shared_types::shared_int num_bytes)=0;
